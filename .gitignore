@@ -1,0 +1,7 @@
+nvim/.local/
+nvim/.cache/
+nvim/.mason/
+nvim/node_modules/
+nvim/pack/
+nvim/plugin/packer_compiled.lua
+
