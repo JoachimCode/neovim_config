@@ -1,0 +1,7 @@
+ln -s ~/dotfiles/nvim ~/.config/nvim
+
+
+if already exist:
+mv ~/.config/nvim ~/.config/nvim.bak
+ln -s ~/dotfiles/nvim ~/.config/nvim
+
