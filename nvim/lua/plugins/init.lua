@@ -1,27 +1,37 @@
+
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    -- event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
     end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    cmd = { "ToggleTerm", "TermExec" },
+    keys = {
+      { "<leader>t", "<cmd>ToggleTerm direction=float<cr>", desc = "Terminal" },
+    },
+    config = function()
+      require("toggleterm").setup({
+        direction = "float",
+        float_opts = { border = "rounded" },
+      })
+    end,
+  },
+   
+  {
+    "NvChad/nvterm",
+    config = function()
+      require("nvterm").setup()
+    end,
+  },
 }

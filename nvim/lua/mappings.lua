@@ -5,6 +5,8 @@ vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
 
 local map = vim.keymap.set
+map("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Terminal" })
+map("t", "<leader>t", [[<C-\><C-n><cmd>ToggleTerm<cr>]], { desc = "Terminal" })
 map("n", "<leader>h", function()
   require("nvterm.terminal").toggle("float")
 end, { desc = "Toggle floating terminal" })
